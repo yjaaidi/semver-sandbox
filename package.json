@@ -26,8 +26,8 @@
     "help": "nx help"
   },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@jscutlery/semver": "1.1.0",
     "@nrwl/cli": "11.1.5",
     "@nrwl/eslint-plugin-nx": "11.1.5",
     "@nrwl/jest": "^11.1.5",
