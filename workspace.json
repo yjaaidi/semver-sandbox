@@ -1,7 +1,32 @@
 {
   "version": 2,
-
-  "projects": {},
+  "projects": {
+    "demo": {
+      "root": "libs/demo",
+      "sourceRoot": "libs/demo/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/demo/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/demo"
+          ],
+          "options": {
+            "jestConfig": "libs/demo/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }
