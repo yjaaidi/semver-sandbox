@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@demo/demo": ["libs/demo/src/index.ts"]
+      "@demo/demo": ["libs/demo/src/index.ts"],
+      "a-publishable-library": ["libs/a-publishable-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

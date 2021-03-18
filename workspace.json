@@ -9,12 +9,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/demo/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/demo/**/*.ts"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/demo"],
+          "outputs": [
+            "coverage/libs/demo"
+          ],
           "options": {
             "jestConfig": "libs/demo/jest.config.js",
             "passWithNoTests": true
@@ -35,6 +39,46 @@
         }
       },
       "root": "."
+    },
+    "a-publishable-library": {
+      "root": "libs/a-publishable-library",
+      "sourceRoot": "libs/a-publishable-library/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/a-publishable-library/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/a-publishable-library"
+          ],
+          "options": {
+            "jestConfig": "libs/a-publishable-library/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "executor": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/a-publishable-library",
+            "tsConfig": "libs/a-publishable-library/tsconfig.lib.json",
+            "packageJson": "libs/a-publishable-library/package.json",
+            "main": "libs/a-publishable-library/src/index.ts",
+            "assets": [
+              "libs/a-publishable-library/*.md"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
