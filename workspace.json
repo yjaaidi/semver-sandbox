@@ -67,10 +67,7 @@
           }
         },
         "version": {
-          "executor": "@jscutlery/semver:version",
-          "options": {
-            "plugins": ["@semantic-release/npm"]
-          }
+          "executor": "@jscutlery/semver:version"
         }
       }
     }
