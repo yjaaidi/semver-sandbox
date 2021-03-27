@@ -69,7 +69,10 @@
         "version": {
           "executor": "@jscutlery/semver:version",
           "options": {
-            "plugins": ["@semantic-release/npm"]
+            "plugins": [
+              "@semantic-release/npm",
+              "@semantic-release/github"
+            ]
           }
         }
       }
